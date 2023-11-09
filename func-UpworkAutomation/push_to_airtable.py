@@ -3,7 +3,6 @@ import feedparser
 from datetime import datetime
 import pandas as pd
 from bs4 import BeautifulSoup
-from dotenv import load_dotenv
 from pyairtable import Api
 import numpy as np
 import html
@@ -13,7 +12,6 @@ import re
 import smtplib
 from email.mime.text import MIMEText
 
-load_dotenv()
 
 # You can change how many results you want to get back by changing the paging parameter: &paging=0%3B50 (0 to 50 results)
 rss_urls = [
@@ -165,6 +163,9 @@ def push_to_airtable():
         pass
     
     send_email("UpWork Automation Job Completed", f"The UpWork Automation job has completed running with {len(new_records)} new records added to the database.\n You can view the database here: {os.environ['DATABASE_LINK']}")
+    
+def main():
+    pass
 
-
-push_to_airtable()
+if __name__ == "__main__":
+   main()
