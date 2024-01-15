@@ -1,5 +1,5 @@
 import logging
-from .push_to_airtable import push_to_airtable
+from push_to_airtable import push_to_airtable
 import azure.functions as func
 
 def main(req: func.HttpRequest) -> func.HttpResponse:

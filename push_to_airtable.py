@@ -163,9 +163,11 @@ def push_to_airtable():
         pass
     
     send_email("UpWork Automation Job Completed", f"The UpWork Automation job has completed running with {len(new_records)} new records added to the database.\n You can view the database here: {os.environ['DATABASE_LINK']}")
-    
+
+
 def main():
-    pass
+    push_to_airtable()
+
 
 if __name__ == "__main__":
    main()
