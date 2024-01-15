@@ -20,3 +20,4 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         message,
         status_code=status_code
     )
+

@@ -11,6 +11,7 @@ import os
 import re
 import smtplib
 from email.mime.text import MIMEText
+from dotenv import load_dotenv
 
 
 # You can change how many results you want to get back by changing the paging parameter: &paging=0%3B50 (0 to 50 results)
@@ -134,6 +135,7 @@ def push_to_airtable():
 
     # Initialize the Airtable API
     # https://pyairtable.readthedocs.io/en/latest/getting-started.html
+    load_dotenv()
     api = Api(os.environ["AIRTABLE_ACCESS_TOKEN"])
     table = api.table(os.environ["BASE_ID"], os.environ["TABLE_ID"])
 
