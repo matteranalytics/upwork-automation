@@ -81,4 +81,10 @@ jobs:
           package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
           scm-do-build-during-deployment: true
           enable-oryx-build: true
+      
+      - name: Override WEBSITE_RUN_FROM_PACKAGE setting
+        uses: azure/appservice-settings@v1
+        with:
+          app-name: 'UpWorkAutomationApp'
+          app-settings-json: '{"WEBSITE_RUN_FROM_PACKAGE":"0"}'
           
