@@ -9,7 +9,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     # Call your push_to_airtable function when the HTTP request is received
     try:
         push_to_airtable()
-        message = "push_to_airtable function executed successfully. Alert email should be sent shortly"
+        message = "push_to_airtable function executed successfully. Alert email should be sent shortly."
         status_code = 200
     except Exception as e:
         logging.error(f"Error during the execution of push_to_airtable: {e}")
