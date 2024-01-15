@@ -86,5 +86,5 @@ jobs:
         uses: azure/appservice-settings@v1
         with:
           app-name: 'UpWorkAutomationApp'
-          app-settings-json: '{"WEBSITE_RUN_FROM_PACKAGE":"0"}'
+          app-settings-json: '[{ "name": "WEBSITE_RUN_FROM_PACKAGE", "value": "1", "slotSetting": false }]'
           
